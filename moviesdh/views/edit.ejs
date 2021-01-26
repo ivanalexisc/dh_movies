@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="todo">
+        <div class="pelis">
+            <form action="/movies/edit/<%= pelicula.id %>?_method=PUT" method="post">
+                Nombre de la peli: <input type="text" name="titulo" id="" value="<%= pelicula.title %>"> <br>
+                Rating: <input type="text" name="rating" id="" value="<%= pelicula.rating %>"> <br>
+                Premios: <input type="number" name="awards" id="" value="<%= pelicula.awards %>"> <br>
+                Fecha de estreno: <input type="date" name="release" id="" value="<%= date %>"> <br>
+                Duración: <input type="number" name="length" id="" value="<%= pelicula.length %>"> <br>
+                Genero: 
+                <select name="genre_id" id="">
+                <% generos.forEach(genero => { %>
+                    <% if (pelicula.GenreId === genero.id) { %>
+                        <option value="<%= genero.id %>" selected> <%= genero.name %></option>
+                    <% } else { %>
+                        <option value="<%= genero.id %>"> <%= genero.name %></option>
+                    <% } %>
+                <% }) %>
+            </select> <br>
+            <label for="">Actors</label>
+            <select name="actores" multiple>
+                <%actores.forEach(actor => { %>
+                    <% if(pelicula.actores.some(actorPelicula => actorPelicula.id == actor.id)) {%>
+                        <option value="<%= actor.id %>" selected><%= actor.first_name %> <%= actor.last_name %></option>
+                    <% } else { %>
+                        <option value="<%= actor.id %>"> <%=actor.first_name %> <%= actor.last_name %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+                <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

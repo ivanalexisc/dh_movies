@@ -1,0 +1,327 @@
+$header: Helvetica, sans-serif;
+$font-family: 'Rubik', sans-serif;
+$body: 'Quicksand', sans-serif;
+$color: #0cf;
+
+.navbar {
+    list-style: none;
+    font-family: $header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    hr {
+    margin-right: -43px;
+    margin-bottom: 37px;
+    margin-top: 19px;
+    }
+    ul {
+        border-color: white;
+        border: 4px;
+    }
+    a {
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        padding: 15px 20px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        &:after {    
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: rgb(0, 0, 0);
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            &:hover{
+                width: 100%; 
+                left: 0; 
+              }
+          }
+      }
+      .logo{
+        width: 400px;
+        margin-top: 6px;
+      }
+    img {
+        width: 88%;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        a:hover:after {
+            width: 0%;
+            left: 0;
+        }
+    }
+    li {
+        display: flex;
+        margin-right: 100px;
+        background-color: white;
+    }
+}
+.todo {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.pelis {
+    margin-top: 135px;
+    display: flex;
+    justify-content: center;
+    font-family: $font-family;
+    select {
+        border-radius: 10px;
+    }
+    a {
+        font-family: 'Quicksand', sans-serif;
+        font-style: oblique;
+    }
+    ul {
+        list-style: none;
+    }
+    form {
+        border-style: solid;
+        padding: 13px;
+        border-radius: 9px;
+        border-color: #80808021;
+        flex-direction: column;
+        display: flex;
+        input {
+            border-radius: 11px;
+            border-color: #cecece;
+        }
+        button {
+            width: 50%;
+            margin-left: 50px;
+            background-color: white;
+            border-radius: 6px;
+        }
+        &.no {
+            border-style: none; 
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+.botones{
+    display: flex;
+    margin-top: 10px;
+    form {
+        margin-top: 10px;
+    }
+}
+a {
+    color: rgb(0, 0, 0);
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-family: $font-family;;
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: rgb(161, 161, 161);
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+  }
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.jeje {
+    color: white;
+}
+.rainbow-bg{
+    animation: rainbow-bg 5.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.rainbow{
+    animation: rainbow 5.5s linear;
+    animation-iteration-count: infinite;
+}
+.demo{
+    width:1160px;
+    height:690px;
+    font-size:5em;
+    float:left;
+    text-align:center;
+}
+
+h1 {
+    float: left;
+    position: fixed;
+    margin-left: 191px;
+    margin-top: 50px;
+}
+
+.esquelet {
+    float:left;
+    position: fixed;
+    margin-left: 287px;
+    transition: 1s;
+    left: 0;
+    img {
+        margin-left: -343px;
+    }
+    button {
+        margin-left: 155px;
+    }
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+.unico {
+    margin-left: 0px;
+    margin-top: -5px;
+    background-color: #efeeee;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #cacaca;
+}
+
+.sinsen {
+        display: inline-block;
+        padding: .75rem 1.25rem;
+        border-radius: 10rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        text-decoration: none;
+        outline-style: none; 
+        &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 10rem;
+        z-index: -2;
+        outline-style: none; 
+        }
+        &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+        outline-style: none; 
+        }
+        &:hover {
+        color: #fff;
+        outline-style: none; 
+        &:before {
+        width: 100%;
+        outline-style: none; 
+        }
+        }
+}

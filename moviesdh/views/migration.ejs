@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <li><% migrations.forEach(migration => { %>
+    <ul>
+        <%= migration.batch %>
+        <%= migration.migration %>
+        <% }); %>
+      </ul>
+    </li>
+  </body>
+</html>

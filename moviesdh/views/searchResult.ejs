@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+    <div class="todo">
+      <div class="pelis">
+        <ul>
+          Resultados: <br>
+          <%if (typeof result == "undefined") { %>
+            <p>No se encontró nada.</p>
+          <% } else { %>
+            <% result.forEach(movie => { %>
+              <a href="detail/<%= movie.id %>"><%= movie.title %></a> <hr><br>  
+            <% }) %>
+            <% }; %>
+          </ul>
+        </div>
+      </div>
+  </body>
+</html>

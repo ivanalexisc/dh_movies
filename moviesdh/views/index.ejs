@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <div class="todo">
+      <%- include('./partials/header') %>
+      <div class="pelis">
+      <li>
+        <% movies.forEach(movie => { %>
+        <div class="peli">
+          <a href="movies/detail/<%= movie.id %>" class="test"><ul >
+            <%= movie.title %>
+          </ul></a>
+          <hr>
+        </div>
+        <% }); %>
+        
+      </div>
+    
+      </li>
+    </div>
+  </body>
+</html>

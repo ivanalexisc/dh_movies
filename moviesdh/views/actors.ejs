@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <div class="todo">
+      <%- include('./partials/header') %>
+      <div class="pelis"> 
+      <li>
+          <%actors.forEach(actor => { %>
+            <ul>
+              <a href="/actors/<%=actor.id%>"><%= actor.first_name %> <%= actor.last_name %> </a><br>
+            </ul>
+            <hr>
+            <% }); %>
+          </li>
+        </div>
+      </div>
+  </body>
+</html>

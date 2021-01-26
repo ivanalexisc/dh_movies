@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="todo">
+        <div class="pelis">
+            <form action="/movies/edit/<%= pelii.id%>/associate?_method=PUT" method="POST">
+            Elige un actor:
+            <select name="actor_id" id="">
+                <% actorii.forEach(actori => { %>
+                    <option value="<%= actori.id %>" > <%= actori.first_name%> <%= actori.last_name%></option>
+                <% }) %>
+            </select>
+                <button type="submit">Agregar</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

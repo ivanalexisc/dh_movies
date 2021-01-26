@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+    <li><% seasons.forEach(season => { %>
+    <ul>
+        <%= season.title %>
+        <% }); %>
+      </ul>
+    </li>
+  </body>
+</html>

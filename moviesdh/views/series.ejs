@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+    <div class="todo">
+      <div class="pelis">
+        <li><% series.forEach(serie => { %>
+          <ul>
+            <a href=""><%= serie.title %></a>
+            <hr>
+          </ul>
+          <% }); %>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

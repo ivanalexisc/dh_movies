@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+      <div class="pelis">
+    <div class="todo">
+        <p>Nuevos estrenos</p> 
+        <% newMovies.forEach(movie => { %>
+          <a href="/movies/detail/<%= movie.id%>"><p><%= movie.title %></p></a>
+          <p><%= movie.release_date %></p>
+          <hr>
+        <% }); %>
+      </div>
+  </div>
+  </body>
+</html>

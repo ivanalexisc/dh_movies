@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <div class="todo">
+      <div class="pelis">
+        <%- include('./partials/header') %>
+        <li>Nombre: <%= actors.first_name %> <%=actors.last_name%></li>
+        <li>ranking: <%= actors.rating %></li>
+        Peliculas en las que actuó: <br> 
+        <% actors.peliculas.forEach(pelicula => { %>
+          <li><a href="/movies/detail/<%=pelicula.id%>"><%= pelicula.title %></li></a>
+          <% }); %>
+        </div>
+      </div>
+  </body>
+</html>

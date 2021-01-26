@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <div class="pelis">
+      <ul> <% episodes.forEach(episode => { %>
+        <li><%= episode.title %></li>
+      </ul>
+      <hr>
+      <% }); %>  
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    
+    <div class="todo">
+      <div class="pelis">
+        <ul>
+          <%if (list.title == "The Texas Chainsaw Massacre 2") { %>
+            <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/ce4d8e49d8cb32f6f84f85b5974526a4_5512c99b-7c38-4b39-bef5-a764c3badd90_480x.progressive.jpg?v=1573651507" alt="Foto de Película">
+            <% } %>
+            <li>Título: <%= list.title %></li>
+            <li>Rating: <%= list.rating %></li>
+            <li>Premios: <%= list.awards %></li>
+            <li>Fecha de lanzamiento: <%= date %></li>
+            <li>Duración: <%= list.length %></li>
+            Genero: 
+            <%if (list.Genre != null) { %>
+              <li><a href="/genres/<%=list.GenreId %>"><%= list.Genre.name %></a></li>
+              <% } else { %>
+                <p>No se encontró el género de esta película.</p>
+                <% } %>
+                <%if (list.actores != null) { %>
+                  <li>Actores: <br><% list.actores.forEach(actor => { %>
+                    <a href="/actors/<%=actor.id%>"><%= actor.first_name %> <%= actor.last_name%> <br></a>
+                    <% });%> </li>
+                    <% } else { %>
+                      <p>No se encontraron actores.</p>
+                      <% } %>
+                      <div class="botones">
+                        <a href="/movies/edit/<%= list.id %>/associate"><button type="submit">AGREGAR ACTOR</button></a>
+                        <form action="/movies/delete/<%= list.id %>?_method=DELETE" method="post" class="no">
+                          <button type="submit" class="unico" style=" 
+                          margin-left: 0px;
+                          margin-top: -7px;
+                          background-color: #efeeee;
+                          border-style: solid;
+                          border-radius: 0px;
+                          border-color: #cacaca;
+                      ">BORRAR</button>
+                        </form>
+                          <a href="/movies/edit/<%= list.id %>"><button type="submit">MODIFICAR</button></a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+            </body>
+            </html>
